@@ -23,8 +23,8 @@ class TestValidators(unittest.TestCase):
         self.assertTrue(validators.is_valid_roll_number("24BCE1001"[0:2]))
         self.assertTrue(validators.is_valid_roll_number("101"))
 
-    def test_roll_number_with_letters(self):
-        self.assertFalse(validators.is_valid_roll_number("10A"))
+    def test_roll_number_with_special_chars(self):
+        self.assertFalse(validators.is_valid_roll_number("26BCE-11352@"))
 
     def test_empty_branch(self):
         self.assertFalse(validators.is_valid_branch(""))
